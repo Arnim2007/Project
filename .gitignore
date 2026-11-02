@@ -1,0 +1,5 @@
+# Ignore virtual environment
+myvenv/
+
+# Ignore pickle files
+*.pkl
