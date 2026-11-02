@@ -1,5 +1,0 @@
-Project Name - Physical Activity Pattern Recognition
-
-You have to use KNN and Random forest to predict physical activity like swimming, running, etc., from the datasets provided in "dataset.csv".
-
-Create a seperate python file to train the model and for testing.
