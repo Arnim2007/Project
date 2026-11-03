@@ -77,6 +77,7 @@ Project/
 ├── instructions.txt              # Project instructions & specifications
 ├── train_model.py                # Standalone script to train, evaluate & save models
 ├── test_predict.py               # Example script demonstrating model inference
+├── app.py                        # Streamlit Web UI application
 ├── model.pkl                     # Default production model (Best Model: Random Forest)
 ├── best_model.pkl                # Alias for the best performing model
 ├── random_forest_model.pkl       # Trained Random Forest model file
@@ -116,7 +117,23 @@ To test loading the saved model and predicting sample activities:
 python test_predict.py
 ```
 
-### 4. Using the Model in Python
+### 4. Running the Streamlit Web Application
+To launch the interactive Web UI for testing and evaluating the models:
+```powershell
+streamlit run app.py
+```
+Or with the virtual environment python:
+```powershell
+.\myvenv\Scripts\streamlit.exe run app.py
+```
+
+#### Web UI Features:
+- **🎯 Interactive Activity Prediction**: Test single records directly from the dataset, pick random samples, compare against ground truth, view confidence distributions across all 6 classes, and tweak sensor features with real-time sliders.
+- **📁 Batch CSV Testing & Evaluation**: Upload custom CSV datasets or run benchmark test splits, compute accuracy and classification metrics, view confusion matrices, and download full prediction results.
+- **📊 Model Comparison & Analytics**: Side-by-side performance comparison between Random Forest (97.63%) and KNN (92.88%), per-class metrics, and top 15 feature importances.
+- **📖 Activity & Sensor Guide**: Comprehensive reference for all 6 physical activities, sensor coordinate systems, Butterworth filter pipeline, and frequency-domain transformations.
+
+### 5. Using the Model in Python
 ```python
 import pickle
 import pandas as pd
