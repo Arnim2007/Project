@@ -3,3 +3,7 @@ myvenv/
 
 # Ignore pickle files
 *.pkl
+
+# Python cache
+__pycache__/
+*.pyc
